@@ -2,7 +2,15 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<script src="~/Scripts/jquery.js"></script>
+<div class="jumbotron">
+    <h2 style="color:chocolate">Welcome to Dot Net Tutorials</h2>
 </div>
+<script>
+    $(document).ready(function () {
+        $("button").click(function () {
+            $.getScript("/Home/WarningMessage");
+        });
+    });
+</script>
+<button>Show Message</button>
