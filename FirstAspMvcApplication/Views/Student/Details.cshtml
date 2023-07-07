@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+@*
+@model Student*@
+
+@model StudentDetailsViewModel
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    @{
+        // var student = ViewData["Student"] as Student;
+            var student = ViewBag.Student;
+    }
+    <div>
+        <h1>Details View Coming From Views/Student Folder</h1>
+    </div>
+
+    @*<h2>@ViewData["Header"]</h2>*@
+    @*<h2>@ViewBag.Header</h2>*@
+    <h2>@Model.Title</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @*<td>@student.Id</td>
+                <td>@student.Name</td>
+                <td>@student.Address</td>*@
+                @*<td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Address</td>*@
+                <td>@Model.Student.Id</td>
+                <td>@Model.Student.Name</td>
+                <td>@Model.Address.City</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
